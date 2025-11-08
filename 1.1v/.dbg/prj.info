@@ -1,0 +1,4 @@
+lib: -lskbase -lglfw -lGL -ldl -lpthread -lX11 -Llibs -lnanosvg -lnanosvgrast -lbox2d -lm -limgui -lglad 
+includes:
+folders:
+type:static-lib

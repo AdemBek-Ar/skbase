@@ -1,0 +1,173 @@
+#!/bin/bash
+clear
+
+CMPL_TAGS="-std=c++26 -O3 -fmodules -Wall -fsearch-include-path -c"
+#echo "c++std-lib
+#"
+#g++ -std=c++26 -O3 -flto -fmodules -fno-fat-lto-objects -fvisibility=hidden -fno-rtti -fno-exceptions -Wall -fsearch-include-path -c '/usr/include/c++/15/bits/std.cc'
+
+#have its main pkg
+#echo "extentions/polytr.cc"
+#g++ $CMPL_TAGS extentions/polytr.cc -o.dbg/bin/polytr.o
+
+echo "./Base.cc"
+g++ $CMPL_TAGS ./Base.cc -o.dbg/bin/Base.o
+
+echo "memory/Array.cc"
+g++ $CMPL_TAGS memory/Array.cc -o.dbg/bin/Array.o
+
+echo "extentions/Json.cc"
+g++ $CMPL_TAGS extentions/Json.cc -o.dbg/bin/Json.o
+
+echo "extentions/Thread/Timer.cc"
+g++ $CMPL_TAGS extentions/Thread/Timer.cc -o.dbg/bin/Timer.o
+
+echo "extentions/Thread/Counter.cc"
+g++ $CMPL_TAGS extentions/Thread/Counter.cc -o.dbg/bin/Counter.o
+
+echo "extentions/Thread/Thread.cc"
+g++ $CMPL_TAGS extentions/Thread/Thread.cc -o.dbg/bin/Thread.o
+
+#echo "outputs/Audio.cc"
+#g++ $CMPL_TAGS ./outputs/Audio.cc -o.dbg/bin/Audio.o
+
+
+
+#have its main pkg
+echo "geomath/Function.cc"
+g++ $CMPL_TAGS geomath/Function.cc -o.dbg/bin/Function.o
+
+echo "geomath/Point.cc"
+g++ $CMPL_TAGS geomath/Point.cc -o.dbg/bin/Point.o
+
+echo "geomath/Line.cc"
+g++ $CMPL_TAGS geomath/Line.cc -o.dbg/bin/Line.o
+
+echo "geomath/Face.cc"
+g++ $CMPL_TAGS geomath/Face.cc -o.dbg/bin/Face.o
+
+echo "./geomath.cc"
+g++ $CMPL_TAGS ./geomath.cc -o.dbg/bin/geomath.o
+
+
+
+#have its main pkg
+echo "extentions/str/String.cc"
+g++ $CMPL_TAGS extentions/str/String.cc -o.dbg/bin/String.o
+echo "extentions/str/String.c++"
+g++ $CMPL_TAGS extentions/str/String.c++ -o.dbg/bin/String_impl.o
+
+echo "extentions/str/WString.cc"
+g++ $CMPL_TAGS extentions/str/WString.cc -o.dbg/bin/WString.o
+echo "extentions/str/WString.c++"
+g++ $CMPL_TAGS extentions/str/WString.c++ -o.dbg/bin/WString_impl.o
+
+echo "./stdextentions.cc"
+g++ $CMPL_TAGS ./stdextentions.cc -o.dbg/bin/stdextentions.o
+
+
+echo "files/get_this_dir.rs"
+rustc --crate-type=staticlib -o .dbg/bin/get_this_dir.rs.a files/get_this_dir.rs
+echo "files/File.cc"
+g++ $CMPL_TAGS files/File.cc -o.dbg/bin/File.o
+
+echo "files/Folder.cc"
+g++ $CMPL_TAGS files/Folder.cc -o.dbg/bin/Folder.o
+
+echo "./files.cc"
+g++ $CMPL_TAGS ./files.cc -o.dbg/bin/files.o
+
+
+
+#have its main pkg
+echo "inputs/KeyBoard.cc"
+g++ $CMPL_TAGS inputs/KeyBoard.cc -o.dbg/bin/KeyBoard.o
+
+echo "inputs/Mouse.cc"
+g++ $CMPL_TAGS inputs/Mouse.cc -o.dbg/bin/Mouse.o
+
+echo "inputs/Joystick.cc"
+g++ $CMPL_TAGS inputs/Joystick.cc -o.dbg/bin/Joystick.o
+
+echo "./inputs.cc"
+g++ $CMPL_TAGS ./inputs.cc -o.dbg/bin/inputs.o
+
+
+
+#have its main pkg
+echo "graph/Shader.cc"
+g++ $CMPL_TAGS graph/Shader.cc -o.dbg/bin/Shader.o
+
+echo "graph/Camera.cc"
+g++ $CMPL_TAGS graph/Camera.cc -o.dbg/bin/graphCam.o
+
+echo "graph/Light.cc"
+g++ $CMPL_TAGS graph/Light.cc -o.dbg/bin/Light.o
+
+echo "graph/Graph.cc"
+g++ $CMPL_TAGS graph/Graph.cc -o.dbg/bin/graphGraph.o
+
+echo "./Graph.cc"
+g++ $CMPL_TAGS ./Graph.cc -o.dbg/bin/Graph.o
+
+
+
+#have its main pkg
+echo "UI/UItem.cc"
+g++ $CMPL_TAGS ./UI/UItem.cc -o.dbg/bin/UItem.o
+
+echo "UI/Label.cc"
+g++ $CMPL_TAGS ./UI/Label.cc -o.dbg/bin/UI_Label.o
+
+echo "UI/Button.cc"
+g++ $CMPL_TAGS ./UI/Button.cc -o.dbg/bin/UI_Button.o
+
+echo "UI/Combo.cc"
+g++ $CMPL_TAGS ./UI/Combo.cc -o.dbg/bin/UI_Combo.o
+
+echo "UI/DropHead.cc"
+g++ $CMPL_TAGS ./UI/DropHead.cc -o.dbg/bin/DropHead.o
+
+echo "UI/Panel.cc"
+g++ $CMPL_TAGS ./UI/Panel.cc -o.dbg/bin/Panel.o
+
+echo "UI/CheckBox.cc"
+g++ $CMPL_TAGS ./UI/CheckBox.cc -o.dbg/bin/CheckBox.o
+
+echo "UI/Window.cc"
+g++ $CMPL_TAGS ./UI/Window.cc -o.dbg/bin/Window.o
+
+echo "./UI.cc"
+g++ $CMPL_TAGS ./UI.cc -o.dbg/bin/UI.o
+
+
+
+#have its main pkg
+echo "Language/Programming/base.cc"
+g++ $CMPL_TAGS ./Language/Programming/base.cc -o.dbg/bin/Language_Programming_base.o
+
+echo "Language/Programming/Token.cc"
+g++ $CMPL_TAGS ./Language/Programming/Token.cc -o.dbg/bin/Language_Programming_Token.o
+
+echo "Language/Programming/Lexer.cc"
+g++ $CMPL_TAGS ./Language/Programming/Lexer.cc -o.dbg/bin/Language_Programming_Lexer.o
+
+echo "./Lang.cc"
+g++ $CMPL_TAGS ./Lang.cc -o.dbg/bin/Lang.o
+
+
+
+echo "
+./SKBase.cc"
+g++ $CMPL_TAGS ./SKBase.cc -o.dbg/bin/SKBase.o
+
+
+echo "get rust.o's from rustlib.a"
+cd .dbg/bin/rs.o.from.a
+ar x ../*.rs.a
+cd ../../../
+
+
+echo "linking..."
+ar rcs .dbg/result/libskbase.a .dbg/bin/*.o .dbg/bin/*.o.from.a/*.o
+echo "Done"

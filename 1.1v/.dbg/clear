@@ -1,0 +1,8 @@
+#!/bin/bash
+echo "rm -rf .dbg/bin/*.o ..."
+rm -rf .dbg/bin/*.o
+echo "rm -rf .dbg/bin/*.o.from.a/* ..."
+rm -rf .dbg/bin/*.o.from.a/*
+echo "rm -rf .dbg/result/* ..."
+rm -rf .dbg/result/*
+echo "	clear: Done."
